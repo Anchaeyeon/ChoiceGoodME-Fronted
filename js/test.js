@@ -36,12 +36,14 @@ function showData(index) {
 }
 
 function nextQuestion(id) {
+    savedData.push(id+1)
     currentIndex++;  // 인덱스 증가
     if (currentIndex < data.length) {
         showData(currentIndex);  // 다음 질문 표시
     } else {
         explainContainerDiv.innerHTML = "테스트가 끝났습니다.";  // 모든 질문 완료 시 메시지
         chooseContainer.innerHTML = "";
+        console.log(savedData)
         localStorage.setItem("testData", savedData)
     }
 }
