@@ -9,7 +9,7 @@
     {
         "id" : 2,
         "question" : ["<p>02.</p><p>오늘 하루의 시작은</p><p>어떤가요?</p><p>하루의 시작 기분을 알려주세요.</p>"],
-        "emoji" : "image/ring.png",
+        "emoji" : "image/cup.png",
         "answer" : ["<p>완벽해요.</p>", "<p>거지꼴이에요.</p>", "<p>평소와 같아요.</p>"]
     },
 
