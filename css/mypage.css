@@ -1,0 +1,81 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 53px 25px 34px;
+    margin: 0;
+    background: #F4F7FA;
+}
+
+header {
+    width: 340px;
+    height: 179.481px;
+    background-color: #Fff;
+    padding: 25px 27px 15px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    position: relative;
+}
+
+header > .info-container {
+    display: flex;
+    align-items: center;
+    column-gap: 22px;
+}
+
+header > .info-container > .img-background {
+    width: 73.76px;
+    height: 73.76px;
+    background-color: #F4F7FA;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header > .info-container > .img-background > img {
+    width: 60px;
+    height: 60px;
+}
+
+header > .info-container > p {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+header > .button-container {
+    width: 282.672px;
+    height: 45.326px;
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    border-radius: 12px;
+    background: rgba(178, 254, 255, 0.48);
+}
+
+header > .button-container > a {
+    color: #02BFFE;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    display: block;
+}
+
+header > .button-container > img {
+    width: 8.849px;
+    height: 15.335px;
+}
+
+header > img {
+    width: 4.458px;
+    height: 17.831px;
+    position: absolute;
+    top: 26px;
+    right: 28px;
+}
