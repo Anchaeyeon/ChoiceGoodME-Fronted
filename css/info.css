@@ -59,6 +59,7 @@ main {
 }
 
 main > .today-pursue-container {
+    margin-top: 20px;
     width: 340px;
     height: 304.437px;
     background-color: #fff;
@@ -97,6 +98,7 @@ main > .today-pursue-container > .name-item {
 }
 
 main > .tag-container {
+    margin-top: 12px;
     display: flex;
     column-gap: 4.44px;
 }
@@ -112,6 +114,7 @@ main > .tag-container > .tag {
 }
 
 main > .meme-mother {
+    margin-top: 12px;
     padding: 19px;
     display: flex;
     flex-direction: column;
@@ -131,4 +134,85 @@ main > .meme-mother > p:first-child {
 
 main > .meme-mother > p {
     text-align: center;
+}
+
+main > .close-container {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 11.67px;
+}
+
+main > .close-container > .close-content {
+    margin-top: 11.67px;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+    white-space: nowrap;
+    column-gap: 10px;
+}
+
+main > .close-container > p {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+main > .close-container > .close-content > .close {
+    background-color: #fff;
+    border-radius: 20px;
+    width: 150px;
+    height: 92px;
+    padding: 23px 17px;
+    display: flex;
+    column-gap: 15px;
+    align-items: center;
+}
+
+main > .close-container > .close-content > .close > img {
+    width: 43.354px;
+    height: 43.354px;
+}
+
+main > .close-container > .close-content > .close > .info-container > p {
+    color: #AAA;
+}
+
+main > .close-container > .close-content > .close > .info-container > p:first-child {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+main > .close-container > .close-content > .close > .info-container > p:nth-child(2) {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+main > .close-container > .close-content > .close > .btn-background {
+    width: 36.311px;
+    height: 36.311px;
+    border-radius: 50%;
+    background-color: #DCFEFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main > .close-container > .close-content > .close > .my-pursue-container {
+    width: 74px;
+    float: right;
+    max-width: 100%
+}
+main > .close-container > .close-content > .close > .my-pursue-container > p {
+    width: auto; /* Use auto to let the paragraph take the necessary width */
+    height: auto; /* Keep height auto */
+    word-break: break-word; /* This allows long words to break */
+    white-space: normal; /* Ensure text wraps normally */
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    color: #AAA;
 }
