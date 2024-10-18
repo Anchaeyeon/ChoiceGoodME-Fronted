@@ -4,9 +4,23 @@
 }
 
 body {
-    padding: 53px 25px 34px;
+    padding: 53px 25px 21px;
     margin: 0;
     background: #F4F7FA;
+    position: relative;
+    height: 100vh;
+}
+
+#top {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#bot {
+    position: fixed;
+    bottom: 0;
+    left: 0;
 }
 
 header {
@@ -20,13 +34,14 @@ header>img {
     width: 30px;
 }
 
-header>i {
-    height: 18px;
+header>img {
+    width: 18px;
+    height: 19.384px;
     color: #D1D2D1;
 }
 
 main>.search-container {
-    margin-top: 9px;
+    margin-top: 14px;
     display: flex;
     align-items: center;
     background-color: #FFF;
@@ -35,10 +50,9 @@ main>.search-container {
     border-radius: 16px;
 }
 
-main>.search-container>i {
+main>.search-container>img {
     height: 22px;
     width: 22px;
-    color: #AAA;
 }
 
 main>.search-container>input {
@@ -76,9 +90,9 @@ main>.personal-pursue-container>.personal-pursue-title-container>p {
     font-weight: 600;
 }
 
-main>.personal-pursue-container>.personal-pursue-title-container>i {
-    width: 24px;
-    height: 24px;
+main>.personal-pursue-container>.personal-pursue-title-container>img {
+    width: 22px;
+    height: 22px;
 }
 
 main>.personal-pursue-container>img {
@@ -96,7 +110,9 @@ main>.personal-pursue-container>button {
     font-weight: 700;
     color: white;
 }
-#nav a:nth-child(1) .icon-container p {
+
+
+.nav a:nth-child(1) .icon-container p {
     color: var(--darkBlue, #02BFFE);
 }
 
@@ -108,6 +124,7 @@ main>.personal-pursue-container>button {
     background: var(--White, #FFF);
     padding: 21.9px 0 21.9px 28.46px;
     margin: 11.9px 0 26.2px 0;
+    align-items: center;
 }
 
 .go-to-test p {
@@ -129,9 +146,13 @@ h3 {
 }
 
 .go-to-test img {
-    width: 10px;
-    height: 10px;
+    width: 8.849px;
+    height: 15.335px;
     margin-left: 100px;
+}
+
+.suggest-container {
+    display: flex;
 }
 
 .suggest-container>img {
