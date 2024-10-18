@@ -16,10 +16,10 @@
         <div class="img-container">
          <img src="/image/logo.png" alt="">
         </div>
-         <form action="#">
-            <input type="text" placeholder="이메일 작성하기" required>
-            <input type="password" placeholder="비밀번호 작성하기" required>
-            <button class="login-container" value="login" type="submit">로그인</button>
+         <form method="post" action="php/login.php">
+            <input type="text" placeholder="이메일 작성하기" required name="userid">
+            <input type="password" placeholder="비밀번호 작성하기" required name="userpasswd">
+            <button class="login-container" type="submit" value="login">로그인</button>
          </form>
 
     </main>
