@@ -48,3 +48,33 @@ header > .search-container > input::placeholder {
     font-size: 16px;
     font-weight: 500;
 }
+
+main > .recommend-container {
+    padding: 17px 21.5px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+main > .recommend-container > p {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+main > .recommend-container > .recommend-items {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 6px;
+}
+
+main > .recommend-container > .recommend-items > .recommend-item {
+    font-size: 15px;
+    font-weight: 700;
+    color: #02BFFE;
+    padding: 10px 16px;
+    border-radius: 59px;
+    background-color: rgba(178, 254, 255, 0.45);
+    line-height: 140%; /* 21px */
+}
