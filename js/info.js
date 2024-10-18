@@ -77,7 +77,7 @@ function displayResult(bestMatch) {
     let template = `
         <img src="image/Status Bar (iPhone).png" alt="" id="top">
         <header>
-            <img src="image/Vector.png" alt="">
+            <img src="image/Vector.png" alt="" class="nextButton">
             <div class="search-container">
                 ${bestMatch['title']}
             </div>
@@ -126,3 +126,8 @@ if (searchInfo) {
     let bestMatch = findBestMatch(savedData);
     displayResult(bestMatch);
 }
+
+
+document.querySelector('.nextButton').addEventListener('click', function() {
+    window.location.href = 'home.html';  
+});
