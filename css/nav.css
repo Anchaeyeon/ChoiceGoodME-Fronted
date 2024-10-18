@@ -1,4 +1,6 @@
 .nav {
+    background-color: white;
+    border-top: 1px solid var(--Gray-gray-100, #E8E8E9);
     display: flex;
     height: 60px;
     justify-content: space-between;
