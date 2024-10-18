@@ -1,0 +1,134 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 53px 25px 21px;
+    margin: 0;
+    background: #F4F7FA;
+    position: relative;
+    height: 100vh;
+}
+
+#top {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#bot {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+header {
+    display: flex;
+    column-gap: 22px;
+    align-items: center;
+}
+
+header > img {
+    width: 11.08px;
+    height: 19.201px;
+}
+
+header > .search-container {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    width: 306px;
+    height: 55px;
+    padding: 15px 17px;
+    border-radius: 16px;    
+}
+
+header > .search-container > p {
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+main > .today-pursue-container {
+    width: 340px;
+    height: 304.437px;
+    background-color: #fff;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 31.85px 0 25px;
+}
+
+main > .today-pursue-container > p {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+main > .today-pursue-container > img {
+    margin-top: 21px;
+    width: 149.066px;
+    height: 149.066px;
+}
+
+main > .today-pursue-container > .name-item {
+    margin-top: 12.8px;
+    width: 99px;
+    height: 40px;
+    padding: 10px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    color: white;
+    border-radius: 40px;
+    background-color: #65E9FF;
+    text-align: center;
+    align-items: center;
+}
+
+main > .tag-container {
+    display: flex;
+    column-gap: 4.44px;
+}
+
+main > .tag-container > .tag {
+    background-color: #fff;
+    padding: 7.4px;
+    border-radius: 43.653px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    color: #65E9FF;
+}
+
+main > .meme-mother {
+    padding: 19px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 340px;
+    height: 118.354px;
+    background-color: #fff;
+    border-radius: 20px;
+    row-gap: 10px;
+}
+
+main > .meme-mother > p:first-child {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+main > .meme-mother > p {
+    text-align: center;
+}
