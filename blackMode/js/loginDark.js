@@ -14,6 +14,6 @@ loginButton.addEventListener('click', function(event) {
         return; 
     }
 
-    // 이메일과 비밀번호가 모두 입력된 경우 home.html로 이동
-    window.location.href = 'home.html';
+   
+    window.location.href = '/blackMode/html/homeDark.html';
 });
