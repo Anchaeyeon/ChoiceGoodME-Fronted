@@ -29,6 +29,12 @@ header {
     align-items: center;
 }
 
+.logo-image {
+
+    width: 136.47px;
+    height: 32.598px;
+}
+
 header>img {
     height: 30px;
     width: 30px;

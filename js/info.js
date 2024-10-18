@@ -71,7 +71,7 @@ if (bestMatch) {
     let template = `
         <img src="image/Status Bar (iPhone).png" alt="" id="top">
         <header>
-            <img src="image/Vector.png" alt="">
+            <img src="image/Vector.png" alt="" class="vector">
             <div class="search-container">
                 ${bestMatch['title']}
             </div>
@@ -116,6 +116,6 @@ if (bestMatch) {
     `;
     
     document.querySelector('main').insertAdjacentHTML('beforeend', template);
-} else {
-    console.log("No matching result found.");
-}
+    document.querySelector('.vector').addEventListener('click', function() {
+        window.location.href = 'home.html';  
+    });
