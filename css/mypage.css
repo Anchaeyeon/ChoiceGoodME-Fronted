@@ -125,3 +125,54 @@ main > .choice-container > .select-container > .btn-background {
     justify-content: center;
     align-items: center;
 }
+
+main > .today-pursue-container {
+    width: 340px;
+    height: 314.12px;
+    border-radius: 20px;
+    background-color: #fff;
+    padding: 19px 19px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 47.38px;
+}
+
+main > .today-pursue-container > .title-container {
+    align-self: flex-start;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+main > .today-pursue-container > .title-container > img {
+    width: 11.08px;
+    height: 19.201px;
+}
+
+main > .today-pursue-container > .title-container > p {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+main > .today-pursue-container > img {
+    margin-top: 23px;
+    width: 158.203px;
+    height: 158.203px;
+}
+
+main > .today-pursue-container > .name-item {
+    margin-top: 16.5px;
+    width: 99px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 40px;
+    background-color: #65E9FF;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+}
