@@ -1,0 +1,227 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 53px 25px 21px;
+    margin: 0;
+    background: #18191D;
+    position: relative;
+    height: 100vh;
+}
+
+::-webkit-scrollbar {
+    display: none;
+  }
+
+#top {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#bot {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+header {
+    display: flex;
+    column-gap: 22px;
+    align-items: center;
+}
+
+header > img {
+    width: 11.08px;
+    height: 19.201px;
+}
+
+header > .search-container {
+    display: flex;
+    align-items: center;
+    background: #25282D;
+    width: 306px;
+    height: 55px;
+    padding: 15px 17px;
+    border-radius: 16px;  
+    color: white;  
+}
+
+header > .search-container > p {
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+main > .today-pursue-container {
+    margin-top: 20px;
+    width: 340px;
+    height: 304.437px;
+    background: #25282D;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 31.85px 0 25px;
+}
+
+main > .today-pursue-container > p {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    color: white;
+}
+
+main > .today-pursue-container > img {
+    margin-top: 21px;
+    width: 149.066px;
+    height: 149.066px;
+}
+
+main > .today-pursue-container > .name-item {
+    margin-top: 12.8px;
+    width: 99px;
+    height: 40px;
+    padding: 10px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    color: var(--text-deep, #5D5D5D);
+    border-radius: 40px;
+    background-color: #65E9FF;
+    text-align: center;
+    align-items: center;
+}
+
+main > .tag-container {
+    margin-top: 12px;
+    display: flex;
+    column-gap: 4.44px;
+}
+
+main > .tag-container > .tag {
+    background: #25282D;
+    padding: 7.4px;
+    border-radius: 43.653px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    color: #65E9FF;
+}
+
+main > .meme-mother {
+    margin-top: 12px;
+    padding: 19px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 340px;
+    height: 118.354px;
+    background: #25282D;
+    border-radius: 20px;
+    row-gap: 10px;
+}
+
+main > .meme-mother > p:first-child {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    color: white;
+}
+
+main > .meme-mother > p {
+    text-align: center;
+    color: #767676;
+}
+
+main > .close-container {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 11.67px;
+}   
+
+main > .close-container > .close-content {
+    margin-top: 11.67px;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+    white-space: nowrap;
+    column-gap: 10px;
+}
+
+main > .close-container > p {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    color: white;
+}
+
+main > .close-container > .close-content > .close {
+    background: #25282D;
+    border-radius: 20px;
+    width: 150px;
+    height: 92px;
+    padding: 23px 17px;
+    display: flex;
+    column-gap: 15px;
+    align-items: center;
+}
+
+main > .close-container > .close-content > .close > img {
+    width: 43.354px;
+    height: 43.354px;
+}
+
+main > .close-container > .close-content > .close > .info-container > p {
+    color: #AAA;
+}
+
+main > .close-container > .close-content > .close > .info-container > p:first-child {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+main > .close-container > .close-content > .close > .info-container > p:nth-child(2) {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+main > .close-container > .close-content > .close > .btn-background {
+    width: 36.311px;
+    height: 36.311px;
+    border-radius: 50%;
+    background-color: #DCFEFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main > .close-container > .close-content > .close > .my-pursue-container {
+    width: 74px;
+    float: right;
+    max-width: 100%
+}
+main > .close-container > .close-content > .close > .my-pursue-container > p {
+    width: auto; /* Use auto to let the paragraph take the necessary width */
+    height: auto; /* Keep height auto */
+    word-break: break-word; /* This allows long words to break */
+    white-space: normal; /* Ensure text wraps normally */
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    color: #AAA;
+}

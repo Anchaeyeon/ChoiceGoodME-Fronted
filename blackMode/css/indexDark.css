@@ -1,0 +1,27 @@
+html, body {
+    height: 100%;  
+    background: #18191D;
+}
+
+main {
+    height: 100%; 
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; 
+}
+
+.container img {
+    width: 154.025px;
+     
+}
+
+.btn{
+    width: 188.042px;
+    height: 52.698px;
+    margin-top: 150px;
+}
