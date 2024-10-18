@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mypage</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/blackMode/css/indexDark.css">
+</head>
+<body>
+    <main>
+       <a href="/blackMode/html/loginDark.html">
+       <div class="container">
+        <img src="/image/logo2.png" alt="">
+        <img src="/image/whitemode.png" alt="" class="btn">
+       </div> 
+       </a>
+    </main>
+     
+</body>
+<script>
+    document.querySelector('.btn').addEventListener('click', function(event) {
+        event.preventDefault();  
+        window.location.href = '/';  
+    });
+</script>
+</html>

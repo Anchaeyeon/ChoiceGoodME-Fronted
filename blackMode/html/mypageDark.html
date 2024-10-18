@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mypage</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/blackMode/css/mypageDark.css">
+    <link rel="stylesheet" href="/blackMode/css/navDark.css">
+</head>
+<body>
+    <img src="/image/Mini-black.png" alt="" id="top">
+    <header>
+        <div class="info-container">
+            <div class="img-background">
+                <img src="/image/mypagePerson.png" alt="">
+            </div>
+            <p>손민수님</p>
+        </div>
+        <div class="button-container">
+            <a href="testDark.html">오늘의 추구미 테스트 하기</a>
+            <img src="/image/VectorBlue.png" alt="">
+        </div>
+        <img src="/image/PlusIcon.png" alt="">
+    </header>
+    
+    <nav class="nav">
+        <a href="homeDark.html">
+        <div class="icon-container">
+            <img src="/image/homeButton.png" alt="홈" class="icon-img">
+            <p>홈</p>
+        </div></a>
+
+        <a href="searchDark.html">
+        <div class="icon-container">
+            <img src="/image/searchBarIcon.png" alt="검색" class="icon-img">
+            <p>검색</p>
+        </div>
+    </a>
+
+        <a href="testDark.html">
+        <div class="icon-container">
+            <img src="/image/testIcon.png" alt="테스트" class="icon-img">
+            <p>테스트</p>
+        </div>
+    </a>
+
+        <a href="mypageDark.html">
+        <div class="icon-container">
+            <img src="/image/colorMypageIcon.png" alt="마이페이지"class="icon-img">
+            <p>마이페이지</p>
+        </div>
+    </a>
+    </nav>
+    <main>
+        <div class="choice-container">
+            <div class="select-container">
+                <img src="/image/tabler_bookmark-filled.png" alt="">
+                <p>내가 저장한 추구미</p>
+            </div>
+    
+            <div class="select-container">
+                <div class="btn-background">
+                    <img src="/image/tabler_plus.png" alt="">
+                </div>
+                <p>나만의 추천 추구미</p>
+            </div>
+        </div>
+
+        <div class="today-pursue-container">
+            <div class="title-container">
+                <p>오늘의 나의 추구미 ✨</p>
+                <img src="/image/VectorInversion.png" alt="" class="vector">
+            </div>
+            <div class="pursue-person-container">
+                <div class="person-container">
+                    <img src="/image/pursueCharacter.png" alt="">
+                    <div class="name-item">
+                    하니
+                    </div>
+                </div>
+                <div class="infos-container">
+                    <p>"완전 럭키비키잖아? 🍀"</p>
+                    <div class="tag-container">
+                        <div class="tag">#럭키비키</div>
+                        <div class="tag">#긍정적 사고</div>
+                        <div class="tag">#원영적 사고</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="close-container">
+                <div class="close-content">
+                    <img src="/image/장원영.png" alt="">
+                    <p>하니</p>
+                </div>
+                <div class="close-content">
+                    <img src="/image/장원영.png" alt="">
+                    <p>하니</p>
+                </div>
+            </div>
+        </div>
+
+        
+    </main>
+    <img src="/image/black-bottom.png" alt="" id="bot">
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelector('.button-container').addEventListener('click', function() {
+            window.location.href = '/blackMode/html/testDark.html';  
+        });
+
+        document.querySelector('.btn-background').addEventListener('click', function() {
+            window.location.href = '/blackMode/html/infoDark.html';  
+        });
+
+        document.querySelector('.vector').addEventListener('click', function() {
+            window.location.href = '/blackMode/html/infoDark.html';  
+        });
+    });
+    
+</script>
+</html>

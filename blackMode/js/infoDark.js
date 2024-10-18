@@ -176,9 +176,10 @@ function displayResult(bestMatch) {
     }
 
     let template = `
-        <img src="image/Status Bar (iPhone).png" alt="" id="top">
+    <img src="/image/Mini-black.png" alt="" id="top">
+
         <header>
-            <img src="image/Vector.png" alt="" class="nextButton">
+            <img src="/image/Vector.png" alt="" class="nextButton">
             <div class="search-container">
                 ${bestMatch['title']}
             </div>
@@ -186,7 +187,7 @@ function displayResult(bestMatch) {
 
         <div class="today-pursue-container">
             ${bestMatch['sub-title']}
-            <img src="image/${bestMatch['resultImg']}" alt="">
+            <img src="/image/${bestMatch['resultImg']}" alt="">
             <div class="name-item">${bestMatch['name']}</div>
         </div>
 
@@ -203,7 +204,7 @@ function displayResult(bestMatch) {
             <div class="close-content">
                 ${bestMatch['similarPersonImg'].map((img, index) => `
                     <div class="close">
-                        <img src="image/${img}" alt="">
+                        <img src="/image/${img}" alt="">
                         <div class="info-container">
                             <p>${bestMatch['similarPerson'][index]}</p>
                             <p>${bestMatch['similarTitle'][index]}</p>
@@ -232,5 +233,5 @@ if (searchInfo) {
 
 // Add navigation event
 document.querySelector('.nextButton').addEventListener('click', function() {
-    window.location.href = 'home.html';  
+    window.location.href = '/blackMode/html/homeDark.html';  
 });
