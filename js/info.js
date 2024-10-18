@@ -1,8 +1,7 @@
 let data = localStorage.getItem('testData');
-let savedData = data.split(",").map((val) => Number.parseInt(val));
-console.log(savedData);
+let searchInfo = localStorage.getItem('searchInfo');
 
-var resultInformation = [
+const resultInformation = [
     {
         "id" : 1,
         "title" : "완전 럭키비기",
@@ -44,7 +43,6 @@ var resultInformation = [
     }
 ];
 
-// savedData와 compareTag 배열을 비교하여 가장 일치하는 결과 찾기
 function calculateSimilarity(arr1, arr2) {
     let similarity = 0;
     for (let i = 0; i < arr1.length; i++) {
@@ -55,23 +53,31 @@ function calculateSimilarity(arr1, arr2) {
     return similarity;
 }
 
-let bestMatch = null;
-let maxSimilarity = -1;
+function findBestMatch(savedData) {
+    let bestMatch = null;
+    let maxSimilarity = -1;
 
-resultInformation.forEach((item) => {
-    let similarity = calculateSimilarity(savedData, item.compareTag);
-    if (similarity > maxSimilarity) {
-        maxSimilarity = similarity;
-        bestMatch = item;
+    resultInformation.forEach((item) => {
+        let similarity = calculateSimilarity(savedData, item.compareTag);
+        if (similarity > maxSimilarity) {
+            maxSimilarity = similarity;
+            bestMatch = item;
+        }
+    });
+
+    return bestMatch;
+}
+
+function displayResult(bestMatch) {
+    if (!bestMatch) {
+        console.log("No matching result found.");
+        return;
     }
-});
 
-if (bestMatch) {
-    // bestMatch에 해당하는 결과 템플릿을 HTML로 삽입
     let template = `
         <img src="image/Status Bar (iPhone).png" alt="" id="top">
         <header>
-            <img src="image/Vector.png" alt="" class="vector">
+            <img src="image/Vector.png" alt="">
             <div class="search-container">
                 ${bestMatch['title']}
             </div>
@@ -103,19 +109,20 @@ if (bestMatch) {
                         </div>
                     </div>
                 `).join('')}
-                <div class="close">
-                    <div class="btn-background">
-                        <img src="image/tabler_plus.png" alt="">
-                    </div>
-                    <div class="my-pursue-container">
-                        <p>나만의 추천 추구미</p>
-                    </div>
-                </div>
             </div>
         </div>
     `;
-    
+
     document.querySelector('main').insertAdjacentHTML('beforeend', template);
-    document.querySelector('.vector').addEventListener('click', function() {
-        window.location.href = 'home.html';  
-    });
+}
+
+if (searchInfo) {
+    // Search for a match by title or tag if searchInfo is present
+    let bestMatch = resultInformation.find(item => item.title.includes(searchInfo) || item.tag.includes(`#${searchInfo}`));
+    displayResult(bestMatch);
+} else if (data) {
+    // If test data exists, compare with compareTag and find the best match
+    let savedData = data.split(",").map(val => Number.parseInt(val));
+    let bestMatch = findBestMatch(savedData);
+    displayResult(bestMatch);
+}

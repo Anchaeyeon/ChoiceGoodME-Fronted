@@ -6,45 +6,46 @@ const url = "test.json";
 
 let currentIndex = 0;
 let data = [];
-let savedData = []
+let savedData = [];
 
 function getData() {
     fetch(url)
     .then((res) => res.json())
     .then((jsonData) => {
-        data = jsonData;  // 데이터 저장
-        showData(currentIndex);  // 첫 번째 질문 표시
+        data = jsonData;  // Store data
+        showData(currentIndex);  // Show first question
     })
     .catch((error) => console.error("Error fetching data:", error));
 }
 
 function showData(index) {
-    if (index >= data.length) return;  // 질문이 없으면 종료
+    if (index >= data.length) return;  // End if no more questions
 
     const currentData = data[index];
-    explainContainerDiv.innerHTML = currentData["question"].join(""); // 질문 표시
+    explainContainerDiv.innerHTML = currentData["question"].join("");  // Show question
     emojiImage.src = currentData["emoji"];
-    chooseContainer.innerHTML = "";  // 이전 답변 초기화
+    chooseContainer.innerHTML = "";  // Clear previous answers
 
     currentData["answer"].forEach((answer, i) => {
         const div = document.createElement('div');
         div.setAttribute('class', "request");
-        div.innerHTML = answer;  // 답변 HTML 추가
-        div.addEventListener('click', () => nextQuestion(i));  // 클릭 시 다음 질문
+        div.innerHTML = answer;  // Add answer to HTML
+        div.addEventListener('click', () => nextQuestion(i));  // On click, move to next question
         chooseContainer.appendChild(div);
     });
 }
 
 function nextQuestion(id) {
-    savedData.push(id+1)
-    currentIndex++;  // 인덱스 증가
+    savedData.push(id + 1);  // Save selected answer
+    currentIndex++;  // Increment index
     if (currentIndex < data.length) {
-        showData(currentIndex);  // 다음 질문 표시
+        showData(currentIndex);  // Show next question
     } else {
-        explainContainerDiv.innerHTML = "테스트가 끝났습니다.";  // 모든 질문 완료 시 메시지
+        explainContainerDiv.innerHTML = "테스트가 끝났습니다.";  // End message
         chooseContainer.innerHTML = "";
-        console.log(savedData)
-        localStorage.setItem("testData", savedData)
+        console.log(savedData);
+        localStorage.setItem("testData", savedData);  // Save result to localStorage
+        window.location.href = 'info.html';  // Redirect to info.html
     }
 }
 
