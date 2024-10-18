@@ -17,6 +17,7 @@ header {
 
 header > img {
     height: 30px;
+    width: 30px;
 }
 
 header > i {
@@ -49,4 +50,49 @@ main > .search-container > input {
 main > .search-container > input::placeholder {
     display: flex;
     align-items: center;    
+}
+
+main > .personal-pursue-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 340px;
+    height: 300px;
+    background-color: #FFF;
+    border-radius: 20px;
+    margin-top: 27.4px;
+    padding: 17px 19px;
+    row-gap: 10px;
+}
+
+main > .personal-pursue-container > .personal-pursue-title-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+main > .personal-pursue-container > .personal-pursue-title-container > p {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+main > .personal-pursue-container > .personal-pursue-title-container > i {
+    width: 24px;
+    height: 24px;
+}
+
+main > .personal-pursue-container > img {
+    width: 170px;
+}
+
+main > .personal-pursue-container > button {
+    width: 271px;
+    height: 43px;
+
+    border-radius: 12px;
+    background-color: #65E9FF;
+    border: 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
 }
