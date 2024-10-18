@@ -5,7 +5,7 @@ goToSearch.addEventListener('click', function(){
 
 
 document.querySelector('.mypage-icons').addEventListener('click', function() {
-    window.location.href = 'search.html';  
+    window.location.href = 'mypage.html';  
 });
 document.querySelector('.logo-image').addEventListener('click', function() {
     window.location.href = 'login.html';  
