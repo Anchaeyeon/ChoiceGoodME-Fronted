@@ -43,6 +43,7 @@ const resultInformation = [
     }
 ];
 
+// Calculate similarity function
 function calculateSimilarity(arr1, arr2) {
     let similarity = 0;
     for (let i = 0; i < arr1.length; i++) {
@@ -53,6 +54,7 @@ function calculateSimilarity(arr1, arr2) {
     return similarity;
 }
 
+// Find the best match based on test data
 function findBestMatch(savedData) {
     let bestMatch = null;
     let maxSimilarity = -1;
@@ -68,6 +70,7 @@ function findBestMatch(savedData) {
     return bestMatch;
 }
 
+// Display the result on the info page
 function displayResult(bestMatch) {
     if (!bestMatch) {
         console.log("No matching result found.");
@@ -116,18 +119,20 @@ function displayResult(bestMatch) {
     document.querySelector('main').insertAdjacentHTML('beforeend', template);
 }
 
+// Check if searchInfo exists, otherwise use test data
 if (searchInfo) {
-    // Search for a match by title or tag if searchInfo is present
     let bestMatch = resultInformation.find(item => item.title.includes(searchInfo) || item.tag.includes(`#${searchInfo}`));
     displayResult(bestMatch);
+    localStorage.setItem("searchInfo", "")
 } else if (data) {
-    // If test data exists, compare with compareTag and find the best match
     let savedData = data.split(",").map(val => Number.parseInt(val));
     let bestMatch = findBestMatch(savedData);
+    console.log(bestMatch)
+    localStorage.setItem('todayPursue', JSON.stringify(bestMatch));  // Store the result
     displayResult(bestMatch);
 }
 
-
+// Add navigation event
 document.querySelector('.nextButton').addEventListener('click', function() {
     window.location.href = 'home.html';  
 });
