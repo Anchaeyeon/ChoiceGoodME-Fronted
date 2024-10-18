@@ -1,4 +1,4 @@
-#nav {
+.nav {
     display: flex;
     height: 60px;
     justify-content: space-between;
