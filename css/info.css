@@ -11,6 +11,10 @@ body {
     height: 100vh;
 }
 
+::-webkit-scrollbar {
+    display: none;
+  }
+
 #top {
     position: absolute;
     top: 0;
@@ -141,7 +145,7 @@ main > .close-container {
     display: flex;
     flex-direction: column;
     row-gap: 11.67px;
-}
+}   
 
 main > .close-container > .close-content {
     margin-top: 11.67px;
