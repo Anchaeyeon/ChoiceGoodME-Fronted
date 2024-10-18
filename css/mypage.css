@@ -79,3 +79,49 @@ header > img {
     top: 26px;
     right: 28px;
 }
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 14px;
+}
+
+main > .choice-container {
+    display: flex;
+    column-gap: 14px;
+}
+
+main > .choice-container > .select-container {
+    display: flex;
+    background-color: #fff;
+    width: 158.856px;
+    height: 92.217px;
+    padding: 23px 17px;
+    border-radius: 20px;
+    justify-content: space-between;
+}
+
+main > .choice-container > .select-container > img {
+    width: 37px;
+    height: 37px;
+}
+
+main > .choice-container > .select-container > p {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    text-align: right;
+    width: 74px;
+    color: #AAA;
+    padding: 0;
+}
+
+main > .choice-container > .select-container > .btn-background {
+    width: 36.311px;
+    height: 36.311px;
+    background-color: #DCFEFF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
