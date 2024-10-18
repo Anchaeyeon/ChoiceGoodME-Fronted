@@ -1,3 +1,7 @@
+let data = localStorage.getItem('testData');
+let savedData = data.split(",").map((val) => Number.parseInt(val));
+console.log(savedData);
+
 var resultInformation = [
     {
         "id" : 1,
@@ -40,40 +44,62 @@ var resultInformation = [
     }
 ];
 
-item = resultInformation[0]
-// 템플릿 리터럴을 사용하여 HTML로 변환
+// savedData와 compareTag 배열을 비교하여 가장 일치하는 결과 찾기
+function calculateSimilarity(arr1, arr2) {
+    let similarity = 0;
+    for (let i = 0; i < arr1.length; i++) {
+        if (arr1[i] === arr2[i]) {
+            similarity++;
+        }
+    }
+    return similarity;
+}
+
+let bestMatch = null;
+let maxSimilarity = -1;
+
+resultInformation.forEach((item) => {
+    let similarity = calculateSimilarity(savedData, item.compareTag);
+    if (similarity > maxSimilarity) {
+        maxSimilarity = similarity;
+        bestMatch = item;
+    }
+});
+
+if (bestMatch) {
+    // bestMatch에 해당하는 결과 템플릿을 HTML로 삽입
     let template = `
         <img src="image/Status Bar (iPhone).png" alt="" id="top">
         <header>
             <img src="image/Vector.png" alt="" class="vector">
             <div class="search-container">
-                ${item['title']}
+                ${bestMatch['title']}
             </div>
         </header>
 
         <div class="today-pursue-container">
-            ${item['sub-title']}
-            <img src="image/${item['resultImg']}" alt="">
-            <div class="name-item">${item['name']}</div>
+            ${bestMatch['sub-title']}
+            <img src="image/${bestMatch['resultImg']}" alt="">
+            <div class="name-item">${bestMatch['name']}</div>
         </div>
 
         <div class="tag-container">
-            ${item['tag'].map(tag => `<div class="tag">${tag}</div>`).join('')}
+            ${bestMatch['tag'].map(tag => `<div class="tag">${tag}</div>`).join('')}
         </div>
 
         <div class="meme-mother">
-            ${item['original'].map(text => `<p>${text}</p>`).join('')}
+            ${bestMatch['original'].map(text => `<p>${text}</p>`).join('')}
         </div>
 
         <div class="close-container">
             <p>비슷한 추구미</p>
             <div class="close-content">
-                ${item['similarPersonImg'].map((img, index) => `
+                ${bestMatch['similarPersonImg'].map((img, index) => `
                     <div class="close">
                         <img src="image/${img}" alt="">
                         <div class="info-container">
-                            <p>${item['similarPerson'][index]}</p>
-                            <p>${item['similarTitle'][index]}</p>
+                            <p>${bestMatch['similarPerson'][index]}</p>
+                            <p>${bestMatch['similarTitle'][index]}</p>
                         </div>
                     </div>
                 `).join('')}
@@ -90,9 +116,6 @@ item = resultInformation[0]
     `;
     
     document.querySelector('main').insertAdjacentHTML('beforeend', template);
-
-
-    
     document.querySelector('.vector').addEventListener('click', function() {
         window.location.href = 'home.html';  
     });
