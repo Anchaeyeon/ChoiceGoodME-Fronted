@@ -2,7 +2,7 @@ const explainContainerDiv = document.getElementsByClassName('explain-container')
 const emojiContainerDiv = document.getElementsByClassName('emoji-container')[0];
 const emojiImage = emojiContainerDiv.getElementsByTagName('img')[0];
 const chooseContainer = document.getElementsByClassName('choose-feeling-container')[0];
-const url = "test.json";
+const url = "/blackMode/test.json";
 
 let currentIndex = 0;
 let data = [];
