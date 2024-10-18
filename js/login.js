@@ -3,6 +3,8 @@ var emailInput = document.querySelector('input[type="text"]');
 var passwordInput = document.querySelector('input[type="password"]');
 
 loginButton.addEventListener('click', function(event) {
+  
+    event.preventDefault();
     
     var email = emailInput.value.trim();
     var password = passwordInput.value.trim();
@@ -12,5 +14,6 @@ loginButton.addEventListener('click', function(event) {
         return; 
     }
 
+   
     window.location.href = 'home.html';
 });
