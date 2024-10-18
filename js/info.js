@@ -45,7 +45,7 @@ item = resultInformation[0]
     let template = `
         <img src="image/Status Bar (iPhone).png" alt="" id="top">
         <header>
-            <img src="image/Vector.png" alt="">
+            <img src="image/Vector.png" alt="" class="vector">
             <div class="search-container">
                 ${item['title']}
             </div>
@@ -91,3 +91,8 @@ item = resultInformation[0]
     
     document.querySelector('main').insertAdjacentHTML('beforeend', template);
 
+
+    
+    document.querySelector('.vector').addEventListener('click', function() {
+        window.location.href = 'home.html';  
+    });

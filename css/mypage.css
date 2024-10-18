@@ -188,7 +188,7 @@ main > .today-pursue-container > .title-container > p {
 .pursue-person-container > .person-container > .name-item {
     width: 72px;
     height: 31px;
-    padding: 10px;
+    padding: 7px;
     background-color: #65E9FF;
     border-radius: 7px;
     font-size: 14px;
@@ -199,11 +199,20 @@ main > .today-pursue-container > .title-container > p {
     margin-top: 10px;
 }
 
+a:last-child > .icon-container > p{
+    color: var(--darkBlue, #02BFFE);
+}
+
 .infos-container {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     height: 100%;
+}
+
+.btn-background img{
+    width: 24px;
+    height: 24px;
 }
 
 .pursue-person-container > .infos-container > p{

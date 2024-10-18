@@ -25,29 +25,29 @@
     </header>
     
     <nav class="nav">
-        <a href="#">
+        <a href="home.html">
         <div class="icon-container">
-            <img src="/image/colorHome.png" alt="홈" class="icon-img">
+            <img src="/image/homeButton.png" alt="홈" class="icon-img">
             <p>홈</p>
         </div></a>
 
-        <a href="#">
+        <a href="search.html">
         <div class="icon-container">
             <img src="/image/searchBarIcon.png" alt="검색" class="icon-img">
             <p>검색</p>
         </div>
     </a>
 
-        <a href="#">
+        <a href="test.html">
         <div class="icon-container">
             <img src="/image/testIcon.png" alt="테스트" class="icon-img">
             <p>테스트</p>
         </div>
     </a>
 
-        <a href="#">
+        <a href="mypage.html">
         <div class="icon-container">
-            <img src="/image/mypageIcon.png" alt="마이페이지"class="icon-img">
+            <img src="/image/colorMypageIcon.png" alt="마이페이지"class="icon-img">
             <p>마이페이지</p>
         </div>
     </a>
@@ -70,7 +70,7 @@
         <div class="today-pursue-container">
             <div class="title-container">
                 <p>오늘의 나의 추구미 ✨</p>
-                <img src="image/VectorInversion.png" alt="">
+                <img src="image/VectorInversion.png" alt="" class="vector">
             </div>
             <div class="pursue-person-container">
                 <div class="person-container">
@@ -105,4 +105,20 @@
     </main>
     <img src="image/Mini.png" alt="" id="bot">
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelector('.button-container').addEventListener('click', function() {
+            window.location.href = 'test.html';  
+        });
+
+        document.querySelector('.btn-background').addEventListener('click', function() {
+            window.location.href = 'info.html';  
+        });
+
+        document.querySelector('.vector').addEventListener('click', function() {
+            window.location.href = 'info.html';  
+        });
+    });
+    
+</script>
 </html>
