@@ -1,20 +1,27 @@
-html, body {
-    height: 100%;  
+html,
+body {
+    height: 100%;
     background: #65E9FF;
 }
 
 main {
-    height: 100%; 
+    height: 100%;
 }
 
 .container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%; 
+    height: 100%;
 }
 
 .container img {
     width: 154.025px;
-    height: 190.085px;
+
+}
+
+.darkmode-img {
+    width: 188.042px;
+    margin-top: 149px;
 }
