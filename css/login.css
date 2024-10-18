@@ -26,6 +26,10 @@ form {
     margin: 136px 0 37px 0;
 }
 
+button{
+    border: none;
+}
+
 form input {
     width: 306px;
     height: 55px;
