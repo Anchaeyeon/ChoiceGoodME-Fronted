@@ -73,7 +73,7 @@ body {
     display: flex;
     width: 315px;
     height: 54.814px;
-    padding: 11px 43px 11px 28px;
+    padding: 11px 20px;
     align-items: center;
     gap: 10px;
     border-radius: 16px;
@@ -83,6 +83,9 @@ body {
     font-weight: 600;
 }
 
+.request:hover {
+    background-color: #DBDBDB;
+}
 
 .request span {
     color: var(--Gray-01, #D1D2D1);

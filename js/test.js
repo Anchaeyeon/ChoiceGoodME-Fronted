@@ -1,26 +1,49 @@
-// const explainContainer = document.querySelector('.explain-container');
+const explainContainerDiv = document.getElementsByClassName('explain-container')[0];
+const emojiContainerDiv = document.getElementsByClassName('emoji-container')[0];
+const emojiImage = emojiContainerDiv.getElementsByTagName('img')[0];
+const chooseContainer = document.getElementsByClassName('choose-feeling-container')[0];
+const url = "test.json";
 
+let currentIndex = 0;
+let data = [];
+let savedData = []
 
-var testInformation = [
-    {
-        "id" : 1,
-        "question" : ["<p>01.</p>", "<p>오늘 하루의 이벤트는</p>", "<p>무엇이 있나요?</p>", "<p>오늘 하루 이벤트를 알려주세요.</p>"],
-        "emoji" : "gift.png",
-        "answer" : ["<p>자신감이 필요해요. <span>(발표, 데이트 등)</span></p>", "<p>평소와 같아요. <span>(출교, 등교 등)</span></p>", "<p>특별함이 필요해요.</p>"],
-    },
+function getData() {
+    fetch(url)
+    .then((res) => res.json())
+    .then((jsonData) => {
+        data = jsonData;  // 데이터 저장
+        showData(currentIndex);  // 첫 번째 질문 표시
+    })
+    .catch((error) => console.error("Error fetching data:", error));
+}
 
-    {
-        "id" : 2,
-        "question" : ["<p>02.</p>", "<p>오늘 하루의 시작은</p>", "<p>어떤가요?</p>", "<p>하루의 시작 기분을 알려주세요.</p>"],
-        "emoji" : "ring.png",
-        "answer" : ["<p>완벽해요.</p>", "<p>거지꼴이에요.</p>", "<p>평소와 같아요.</p>"],
-    },
+function showData(index) {
+    if (index >= data.length) return;  // 질문이 없으면 종료
 
-    {
-        "id" : 3,
-        "question" : ["<p>03.</p>", "<p>오늘 나의 상태은</p>", "<p>어떤가요?</p>", "<p>오늘의 상태를 알려주세요.</p>"],
-        "emoji" : "emoji.png",
-        "answer" : ["<p>행복해요.</p>", "<p>힘들어요.</p>", "<p>평소와 같아요.</p>"],
+    const currentData = data[index];
+    explainContainerDiv.innerHTML = currentData["question"].join(""); // 질문 표시
+    emojiImage.src = currentData["emoji"];
+    chooseContainer.innerHTML = "";  // 이전 답변 초기화
+
+    currentData["answer"].forEach((answer, i) => {
+        const div = document.createElement('div');
+        div.setAttribute('class', "request");
+        div.innerHTML = answer;  // 답변 HTML 추가
+        div.addEventListener('click', () => nextQuestion(i));  // 클릭 시 다음 질문
+        chooseContainer.appendChild(div);
+    });
+}
+
+function nextQuestion(id) {
+    currentIndex++;  // 인덱스 증가
+    if (currentIndex < data.length) {
+        showData(currentIndex);  // 다음 질문 표시
+    } else {
+        explainContainerDiv.innerHTML = "테스트가 끝났습니다.";  // 모든 질문 완료 시 메시지
+        chooseContainer.innerHTML = "";
+        localStorage.setItem("testData", savedData)
     }
-]
+}
 
+getData();
